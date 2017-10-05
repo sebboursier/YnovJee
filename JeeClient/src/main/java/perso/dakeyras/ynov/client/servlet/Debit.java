@@ -20,6 +20,6 @@ public class Debit extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/Debit.jsp").forward(req, resp);
+		this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/page/Debit.jsp").forward(req, resp);
 	}
 }
