@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	
+	<servlet>
+		<servlet-name>Credit</servlet-name>
+		<servlet-class>perso.dakeyras.ynov.client.servlet.Credit</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Credit</servlet-name>
+		<url-pattern>/Credit</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Debit</servlet-name>
+		<servlet-class>perso.dakeyras.ynov.client.servlet.Debit</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Debit</servlet-name>
+		<url-pattern>/Debit</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Home</servlet-name>
+		<servlet-class>perso.dakeyras.ynov.client.servlet.Home</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>perso.dakeyras.ynov.client.servlet.Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Transactions</servlet-name>
+		<servlet-class>perso.dakeyras.ynov.client.servlet.Transactions</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Transactions</servlet-name>
+		<url-pattern>/Transactions</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Virement</servlet-name>
+		<servlet-class>perso.dakeyras.ynov.client.servlet.Virement</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Virement</servlet-name>
+		<url-pattern>/Virement</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
