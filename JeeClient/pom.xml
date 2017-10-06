@@ -13,8 +13,12 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>perso.dakeyras.ynov</groupId>
+			<artifactId>JeeModel</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 </project>

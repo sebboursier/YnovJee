@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import perso.dakeyras.ynov.client.util.BouchonUtils;
+
 /**
  * @author sebboursier
  *
@@ -17,6 +19,8 @@ public class Home extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/page/Home.jsp").forward(req, resp);
+		req.setAttribute("page", "Home");
+		req.setAttribute("client", BouchonUtils.getClient());
+		this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/common/Layout.jsp").forward(req, resp);
 	}
 }

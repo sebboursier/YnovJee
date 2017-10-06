@@ -1,17 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!doctype html>
-<html lang="fr">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Banket - Home</title>
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-</head>
-<body>
-	<jsp:include page="../common/Header.jsp" />
-	HOME
-</body>
-</html>
+<main class="container">
+	<section class="card-panel">
+		<div class="row">
+			<article class="col s6 center-align">
+				Bonjour ${client.prenom} ${client.nom}
+			</article>
+			<article class="col s6 center-align">
+				<label>
+					Identifiant
+				</label>
+				<span>
+					${client.id}
+				</span>
+			</article>
+		</div>
+	</section>
+	<ul class="collection with-header">
+		<li class="collection-header"><h4>Comptes disponibles</h4></li>
+		<li class="collection-item">Compte 1</li>
+        <li class="collection-item">Compte 2</li>
+	</ul>
+</main>

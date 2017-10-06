@@ -10,6 +10,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
 /**
@@ -17,6 +19,10 @@ import javax.persistence.OneToMany;
  *
  */
 @Entity
+@NamedQueries({ @NamedQuery(name = "Client.findAll", query = "SELECT i from Client i"),
+		@NamedQuery(name = "Client.findById", query = "SELECT i from Client i WHERE i.id = :id"),
+		@NamedQuery(name = "Client.findByLoginAndPassword", query = "SELECT i from Client i WHERE i.login = :login AND i.password = :password"),
+		@NamedQuery(name = "Client.removeAll", query = "DELETE FROM Client") })
 public class Client implements Serializable {
 
 	private static final long serialVersionUID = 1L;

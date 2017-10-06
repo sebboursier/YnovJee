@@ -11,6 +11,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
 /**
@@ -18,6 +20,10 @@ import javax.persistence.OneToMany;
  *
  */
 @Entity
+@NamedQueries({ @NamedQuery(name = "Compte.findAll", query = "SELECT i from Compte i"),
+		@NamedQuery(name = "Compte.findById", query = "SELECT i from Compte i WHERE i.id = :id"),
+		@NamedQuery(name = "Compte.findByLibelle", query = "SELECT i from Compte i WHERE i.libelle = :libelle"),
+		@NamedQuery(name = "Compte.removeAll", query = "DELETE FROM Compte") })
 public class Compte implements Serializable {
 
 	private static final long serialVersionUID = 1L;

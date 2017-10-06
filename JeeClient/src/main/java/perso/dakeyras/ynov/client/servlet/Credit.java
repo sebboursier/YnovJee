@@ -20,6 +20,7 @@ public class Credit extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/page/Credit.jsp").forward(req, resp);
+		req.setAttribute("page", "Credit");
+		this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/common/Layout.jsp").forward(req, resp);
 	}
 }

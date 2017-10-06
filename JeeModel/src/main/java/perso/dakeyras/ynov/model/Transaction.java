@@ -11,6 +11,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -19,6 +21,10 @@ import javax.persistence.TemporalType;
  *
  */
 @Entity
+@NamedQueries({ @NamedQuery(name = "Transaction.findAll", query = "SELECT i from Transaction i"),
+		@NamedQuery(name = "Transaction.findById", query = "SELECT i from Transaction i WHERE i.id = :id"),
+		@NamedQuery(name = "Transaction.findByLibelle", query = "SELECT i from Transaction i WHERE i.libelle = :libelle"),
+		@NamedQuery(name = "Transaction.removeAll", query = "DELETE FROM Transaction") })
 public class Transaction implements Serializable {
 
 	private static final long serialVersionUID = 1L;

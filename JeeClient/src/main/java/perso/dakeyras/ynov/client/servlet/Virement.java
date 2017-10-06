@@ -20,6 +20,7 @@ public class Virement extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/page/Virement.jsp").forward(req, resp);
+		req.setAttribute("page", "Virement");
+		this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/common/Layout.jsp").forward(req, resp);
 	}
 }
