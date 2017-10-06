@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <main class="container">
 	<section class="card-panel">
 		<div class="row">
@@ -16,7 +17,8 @@
 	</section>
 	<ul class="collection with-header">
 		<li class="collection-header"><h4>Comptes disponibles</h4></li>
-		<li class="collection-item">Compte 1</li>
-        <li class="collection-item">Compte 2</li>
+		<c:forEach items="${client.comptes}" var="compte">
+			<li class="collection-item">${compte.libelle}</li>
+    	</c:forEach>
 	</ul>
 </main>

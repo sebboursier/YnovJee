@@ -34,6 +34,8 @@ public class Compte implements Serializable {
 
 	private String libelle;
 
+	private Double amount;
+
 	@ManyToOne
 	private Client client;
 
@@ -98,6 +100,21 @@ public class Compte implements Serializable {
 	 */
 	public void setClient(Client client) {
 		this.client = client;
+	}
+
+	/**
+	 * @return the amount
+	 */
+	public Double getAmount() {
+		return amount;
+	}
+
+	/**
+	 * @param amount
+	 *            the amount to set
+	 */
+	public void setAmount(Double amount) {
+		this.amount = amount;
 	}
 
 }
