@@ -4,7 +4,7 @@
 package perso.dakeyras.ynov.model;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Collection;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -40,7 +40,7 @@ public class Client implements Serializable {
 	private String password;
 
 	@OneToMany(mappedBy = "client")
-	private List<Compte> comptes;
+	private Collection<Compte> comptes;
 
 	/**
 	 * @return the id
@@ -120,7 +120,7 @@ public class Client implements Serializable {
 	/**
 	 * @return the comptes
 	 */
-	public List<Compte> getComptes() {
+	public Collection<Compte> getComptes() {
 		return comptes;
 	}
 
@@ -128,7 +128,7 @@ public class Client implements Serializable {
 	 * @param comptes
 	 *            the comptes to set
 	 */
-	public void setComptes(List<Compte> comptes) {
+	public void setComptes(Collection<Compte> comptes) {
 		this.comptes = comptes;
 	}
 }

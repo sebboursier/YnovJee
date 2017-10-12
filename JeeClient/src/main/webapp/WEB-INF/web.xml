@@ -9,7 +9,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Credit</servlet-name>
-		<url-pattern>/Credit</url-pattern>
+		<url-pattern>/credit</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
@@ -18,7 +18,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Debit</servlet-name>
-		<url-pattern>/Debit</url-pattern>
+		<url-pattern>/debit</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
@@ -27,7 +27,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Home</servlet-name>
-		<url-pattern>/Home</url-pattern>
+		<url-pattern>/home</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
@@ -36,7 +36,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Login</servlet-name>
-		<url-pattern>/Login</url-pattern>
+		<url-pattern>/login</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
@@ -45,7 +45,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Transactions</servlet-name>
-		<url-pattern>/Transactions</url-pattern>
+		<url-pattern>/transactions</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
@@ -54,7 +54,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Virement</servlet-name>
-		<url-pattern>/Virement</url-pattern>
+		<url-pattern>/virement</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

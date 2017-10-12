@@ -28,9 +28,9 @@ public class TestDao {
 
 	@After
 	public void after() {
-		Dao.execute("Client.removeAll");
-		Dao.execute("Compte.removeAll");
 		Dao.execute("Transaction.removeAll");
+		Dao.execute("Compte.removeAll");
+		Dao.execute("Client.removeAll");
 	}
 
 	@Test
@@ -90,4 +90,26 @@ public class TestDao {
 		Assert.assertNotNull(Dao.findOne("Transaction.findById", params));
 	}
 
+	@Test
+	public void testFetch() {
+		JpaManager.getEntityManagerFactory();
+
+		Client client = new Client();
+		client.setNom("Bob");
+		client = Dao.saveOrUpdate(client);
+
+		Compte c1 = new Compte();
+		c1.setClient(client);
+		c1 = Dao.saveOrUpdate(c1);
+
+		Compte c2 = new Compte();
+		c2.setClient(client);
+		c2 = Dao.saveOrUpdate(c2);
+
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put("id", client.getId());
+		client = Dao.findOne("Client.findById", params);
+
+		Assert.assertEquals(2, client.getComptes().size());
+	}
 }

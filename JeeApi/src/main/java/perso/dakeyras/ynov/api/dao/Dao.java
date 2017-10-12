@@ -10,12 +10,15 @@ import java.util.Map.Entry;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 
 /**
  * @author sebboursier
  *
  */
 public abstract class Dao {
+
+	@Transactional
 	public static <T> List<T> find(final String queryString, final Map<String, Object> params) {
 		List<T> itemList = null;
 		EntityManager em = null;
@@ -44,6 +47,7 @@ public abstract class Dao {
 		return itemList;
 	}
 
+	@Transactional
 	public static <T> T findOne(final String queryString, final Map<String, Object> params) {
 		T item = null;
 		EntityManager em = null;
@@ -73,6 +77,7 @@ public abstract class Dao {
 		return item;
 	}
 
+	@Transactional
 	public static <T> T saveOrUpdate(T item) {
 		EntityManager em = null;
 
@@ -93,6 +98,7 @@ public abstract class Dao {
 		return item;
 	}
 
+	@Transactional
 	public static int execute(final String queryString) {
 		EntityManager em = null;
 		int nb = 0;
